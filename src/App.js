@@ -1,6 +1,12 @@
 import "./App.css";
 import Product from "./ReactJS/Buổi 3 (3-1)/BTVN/tech";
+import Aside from "./ReactJS/Buổi 4 (6-1)/BTVN/Aside";
+import Boxes from "./ReactJS/Buổi 4 (6-1)/BTVN/Boxes";
+import Footer from "./ReactJS/Buổi 4 (6-1)/BTVN/Footer";
+import Header from "./ReactJS/Buổi 4 (6-1)/BTVN/Header";
+import MainContent from "./ReactJS/Buổi 4 (6-1)/BTVN/MainContent";
 import DemoChildren from "./ReactJS/Buổi 4 (6-1)/DemoChildren";
+
 // import Avatar from './Component/avatar';
 // import Comp1 from './Component/Buổi 3 (3-1)/Comp1';
 // import Comp2 from '../src/Component/Buổi 3 (3-1)/Comp2/Comp2'
@@ -44,8 +50,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="app">
-          {/* <Product
+        <div>
+          <Header />
+          <div style={{ display: "flex" }}>
+            <MainContent style={{ width: "70%" }} />
+            <Aside style={{ width: "30%" }} />
+          </div>
+          <Boxes />
+          <Footer />
+        </div>
+        {/* <div className="app"> */}
+        {/* <Product
             name="iPhone 16 Pro 128GB"
             price="2000000"
             discount="Giảm 10% tối đa 1.000.000 VNĐ cho đơn hàng từ 2.000.000 VNĐ"
@@ -63,14 +78,14 @@ function App() {
             discount="Giảm 10% tối đa 1.000.000 VNĐ cho đơn hàng từ 2.000.000 VNĐ"
             link={URL1}
           /> */}
-          {products.map((item) => {
+        {/* {products.map((item) => {
             return <Product {...item} />;
           })}
         </div>
         <DemoChildren>
           <h1>Hello</h1>
           <h1>Siuuuuuu</h1>
-        </DemoChildren>
+        </DemoChildren> */}
         {/* <ul>
           <li>
             <Comp1 title="UI/UX Design" icon="✿" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
