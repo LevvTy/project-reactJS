@@ -1,0 +1,14 @@
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.mainContent {
+    padding: 20px;
+    margin: 100px;
+}
+
+.size {
+    width: 200px;
+    height: 30px;
+}

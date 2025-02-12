@@ -1,148 +1,57 @@
 import "./App.css";
-import Product from "./ReactJS/Buổi 3 (3-1)/BTVN/tech";
-import Aside from "./ReactJS/Buổi 4 (6-1)/BTVN/Aside";
-import Boxes from "./ReactJS/Buổi 4 (6-1)/BTVN/Boxes";
-import Footer from "./ReactJS/Buổi 4 (6-1)/BTVN/Footer";
-import Header from "./ReactJS/Buổi 4 (6-1)/BTVN/Header";
-import MainContent from "./ReactJS/Buổi 4 (6-1)/BTVN/MainContent";
-import DemoChildren from "./ReactJS/Buổi 4 (6-1)/DemoChildren";
-
-// import Avatar from './Component/avatar';
-// import Comp1 from './Component/Buổi 3 (3-1)/Comp1';
-// import Comp2 from '../src/Component/Buổi 3 (3-1)/Comp2/Comp2'
-
-const URL1 =
-  "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/329149/iphone-16-pro-max-titan-sa-mac-5-638638962363556047-750x500.jpg";
-const URL2 =
-  "https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/42/305658/iphone-15-pro-max-titan-den-2-638629415797228950-750x500.jpg";
-const URL3 =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuhUxuQkpPfTGGFQSVhI3nTy_46-aH6Tj-Zw&s";
-
-const NewComponent = () => {
-  return <h1>Welcome</h1>;
-};
+import Bai1 from "./ReactJS/Buổi 11 (5-2)/Bai1.jsx";
+import Bai2 from "./ReactJS/Buổi 11 (5-2)/Bai2.jsx";
+import Bai3 from "./ReactJS/Buổi 11 (5-2)/Bai3.jsx";
+import Page11 from "./ReactJS/Buổi 11 (5-2)/Page11.jsx";
+import Bai1vn from "./ReactJS/Buổi 12 (7-2)/BTVN/Bai1vn.jsx";
+import Bai2vn from "./ReactJS/Buổi 12 (7-2)/BTVN/Bai2vn.jsx";
+import Bai3vn from "./ReactJS/Buổi 12 (7-2)/BTVN/Bai3vn.jsx";
+import Bai1B13 from "./ReactJS/Buổi 13 (10-2)/BTVN/Bai1B13.jsx";
+import Bai2B13 from "./ReactJS/Buổi 13 (10-2)/BTVN/Bai2B13.jsx";
+import Bai3B13 from "./ReactJS/Buổi 13 (10-2)/BTVN/Bai3B13.jsx";
+import Bai4B13 from "./ReactJS/Buổi 13 (10-2)/BTVN/Bai4B13.jsx";
+import DemoMemo from "./ReactJS/Buổi 13 (10-2)/DemoMemo.jsx";
+import Page13 from "./ReactJS/Buổi 13 (10-2)/Page13.jsx";
+import Homework from "./ReactJS/Buổi 6 HOOK (10-1)/BTVN/Homework.js";
+import Page6 from "./ReactJS/Buổi 6 HOOK (10-1)/Page6.js";
+import Tv from "./ReactJS/Buổi 6 HOOK (10-1)/Tv";
+import Expense from "./ReactJS/Buổi 7 (13-1)/Expense.js";
+import ExpenseTracker from "./ReactJS/Buổi 7 (13-1)/ExpenseTracker.js";
+import Page8 from "./ReactJS/Buổi 8 (15-1)/Page8.js";
+import Page9 from "./ReactJS/Buổi 9 (17-1)/Page9.js";
+import Page1 from "./ReactJS/Page1.js";
 
 function App() {
-  const products = [
-    {
-      name: "iPhone 16 Pro 128GB",
-      discount: "Giảm 10% tối đa 1.000.000 VNĐ cho đơn hàng từ 2.000.000 VNĐ",
-      price: "22990000",
-      link: URL1,
-    },
-    {
-      name: "iPhone 15 Pro",
-      discount: "Giảm 10% tối đa 1.000.000 VNĐ cho đơn hàng từ 6.000.000 VNĐ",
-      price: "24990000",
-      link: URL2,
-    },
-    {
-      name: "Laptop Pro",
-      discount: "Giảm 10% tối đa 1.000.000 VNĐ cho đơn hàng từ 7.000.000 VNĐ",
-      price: "23990000",
-      link: URL3,
-    },
-  ];
-
-  // const log = () => {
-  //   alert("Hello")
-  // }
   return (
     <div className="App">
       <header className="App-header">
-        <div>
-          <Header />
-          <div style={{ display: "flex" }}>
-            <MainContent style={{ width: "70%" }} />
-            <Aside style={{ width: "30%" }} />
-          </div>
-          <Boxes />
-          <Footer />
-        </div>
-        {/* <div className="app"> */}
-        {/* <Product
-            name="iPhone 16 Pro 128GB"
-            price="2000000"
-            discount="Giảm 10% tối đa 1.000.000 VNĐ cho đơn hàng từ 2.000.000 VNĐ"
-            link={URL1}
-          />
-          <Product
-            name="iPhone 16 Pro 128GB"
-            price="2000000"
-            discount="Giảm 10% tối đa 1.000.000 VNĐ cho đơn hàng từ 2.000.000 VNĐ"
-            link={URL1}
-          />
-          <Product
-            name="iPhone 16 Pro 128GB"
-            price="2000000"
-            discount="Giảm 10% tối đa 1.000.000 VNĐ cho đơn hàng từ 2.000.000 VNĐ"
-            link={URL1}
-          /> */}
-        {/* {products.map((item) => {
-            return <Product {...item} />;
-          })}
-        </div>
-        <DemoChildren>
-          <h1>Hello</h1>
-          <h1>Siuuuuuu</h1>
-        </DemoChildren> */}
-        {/* <ul>
-          <li>
-            <Comp1 title="UI/UX Design" icon="✿" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Comp1 title="Web Development" icon="☠" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Comp1 title="Branding" icon="✉" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Comp1 title="Photography" icon="✈" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Comp1 title="Apps Development" icon="☻" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Comp1 title="Digital Marketing" icon="☃" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
-          </li>
-        </ul>
-
-
-      <Comp2 /> */}
-
         {/* <div>
-        <Avatar link = {URL3} />
-        <Avatar link = {URL2} />
+          <Page1 />
         </div> */}
-        {/* <NewComponent/> */}
-        {/* <Cha/> */}
-        {/* <h1 style = {{backgroundColor : "red"}}>Hello</h1>
-        <button onClick = {log}>Click Here</button> */}
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        
-        <button onClick = {log()}>Click Here (false)</button>  gọi hàm thực thi ngay lập tức khi reLoad trang */}
+        {/* 
+        <h1 style={{ color: "red" }}>HOOK</h1>
+        <Tv />
+        <Page6 />
+        <h1 style={{ color: "red" }}>Bài tập</h1>
+        <Homework /> */}
+
+        {/* <Expense />
+        <ExpenseTracker /> */}
+        {/* <Page8 /> */}
+        {/* <Page9 /> */}
+        {/* <Page11 /> */}
+        {/* <Bai1 /> */}
+        {/* <Bai2 />
+        <Bai3 /> */}
+        {/* <Bai1vn /> */}
+        {/* <Bai2vn /> */}
+        {/* <Bai3vn /> */}
+        <Page13 />
+        <DemoMemo />
+        <Bai1B13 />
+        <Bai2B13 />
+        <Bai3B13 />
+        <Bai4B13 />
       </header>
     </div>
   );

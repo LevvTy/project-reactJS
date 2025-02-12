@@ -1,0 +1,91 @@
+import React, { useState } from "react";
+
+const DATA = [
+  {
+    id: "CV1",
+    title: "Learn Javascript",
+    isDone: false,
+  },
+  {
+    id: "CV2",
+    title: "Learn HTML",
+    isDone: false,
+  },
+];
+
+const Homework = () => {
+  const [todoList, setTodoList] = useState(DATA);
+  const [inputValue, setInputValue] = useState("");
+
+  const renderTodoList = () => {
+    return todoList.map((item, index) => {
+      return (
+        <div key={item.id}>
+          <input onClick={() => onCheckedTodo(item.id)} type="checkbox" />
+          {item.isDone ? <s>{item.title}</s> : <span>{item.title}</span>}
+          <button onClick={() => deleteItem(item.id)}>Delete</button>
+        </div>
+      );
+    });
+  };
+
+  const deleteItem = (id) => {
+    setTodoList((prevList) => {
+      const copyList = [...prevList];
+      const index = copyList.findIndex((item) => item.id === id);
+
+      if (index === -1) {
+        return prevList;
+      }
+
+      copyList.splice(index, 1);
+      return copyList;
+    });
+  };
+
+  const addTodoList = () => {
+    setTodoList((prevList) => {
+      const newTodo = {
+        id: `CV${prevList.length + 1}`,
+        title: inputValue,
+        isDone: false,
+      };
+
+      return [...prevList, newTodo];
+    });
+    setInputValue("");
+  };
+
+  const onCheckedTodo = (id) => {
+    const cloneList = [...todoList];
+    const index = cloneList.findIndex((item) => item.id === id);
+    if (index === -1) {
+      return;
+    }
+    cloneList[index] = {
+      ...cloneList[index],
+      isDone: !cloneList[index].isDone,
+    };
+    setTodoList(cloneList);
+  };
+
+  return (
+    <div>
+      <h1>THINGS TO DO</h1>
+      <div>
+        <input
+          value={inputValue}
+          onChange={(e) => {
+            setInputValue(e.target.value);
+          }}
+        />
+        <button disabled={!inputValue.trim()} onClick={addTodoList}>
+          Add to do
+        </button>
+      </div>
+      <div>{renderTodoList()}</div>
+    </div>
+  );
+};
+
+export default Homework;

@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 } */
-
+/* 
 
 .app {
   display: flex;
@@ -52,4 +52,7 @@
   width: 300px;
   text-align: center;
   background-color: #f7ecd6;
+} */
+html {
+  /* background-color: #3f3f3f; */
 }
